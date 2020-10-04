@@ -1,0 +1,44 @@
+// contact style
+
+.c-dv{
+	@extend %d-flex;
+	.icon{
+		width: 50px;
+		margin-right: 5px;
+	}
+	.entry-txt{
+		width: calc(100% - 55px);
+		.heading{
+			color: $color-hover;
+		}
+		a{
+			color: $color-site;
+			&:hover{
+				color: $color-hover;	
+			}
+		}
+	}
+}
+
+.contact-from-bx{
+	.input-bx{
+		border: 1px solid $color-site;
+		padding: 15px;
+		label{
+			margin-bottom: 0;
+		}
+	}
+	.email-input-bx{
+		margin-left: -1px;
+	}
+	.msg-input-bx{
+		margin-top: -1px;
+	}
+	.form-control{
+		border: none;
+		padding: 0;
+	}
+	.common-btn{
+		min-width: 250px;
+	}
+}

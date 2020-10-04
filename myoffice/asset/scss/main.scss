@@ -1,0 +1,18 @@
+// main stylesheet
+
+@import 'var';
+@import 'common';
+@import 'header';
+
+// pages
+@import 'login';
+@import 'home';
+@import 'features';
+@import 'contact';
+@import 'about';
+@import 'help';
+@import 'pricing';
+// pages
+
+@import 'footer';
+@import 'responsive.scss';

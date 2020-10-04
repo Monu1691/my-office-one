@@ -1,0 +1,66 @@
+// header style
+
+.site-navigation{
+	padding: 30px 50px;
+	ul{
+		li{
+			a{
+				font-weight: 500;
+				color: $color-site;
+				padding: 10px 20px !important;
+				&:hover,&:focus{
+					color: $color-hover;
+				}
+			}
+		}
+	}
+	.navbar-toggler{
+		padding: 0;
+		outline: none;
+		margin-left: auto;
+		.toggler-icon{
+			display: block;
+			width: 30px;
+			height: 5px;
+			height: 2px;
+			border-radius: 30%;
+			background-color: $color-hover;
+			@include common-transition(all 0.3s ease-out);
+			margin-left: auto;
+			&:nth-child(2){
+				margin-top: 5px;
+				margin-bottom: 5px;
+			}
+		}
+	}
+	.navbar-toggler[aria-expanded=true]{
+		.toggler-icon{
+			&:nth-child(1){
+				width: 15px;
+			}
+			&:nth-child(2){
+				width: 20px;
+			}
+		}
+	}
+}
+
+
+@media (max-width: 991px){
+	.site-navigation{
+		padding: 20px;
+		.navbar-collapse{
+			position: absolute;
+			top: 100%;
+			left: 0;
+			right: 0;
+			background-color: rgb(255, 255, 255);
+			background-color: $color-hover;
+			z-index: 1;
+			a{
+				color: #fff !important;
+			}
+
+		}
+	}
+}

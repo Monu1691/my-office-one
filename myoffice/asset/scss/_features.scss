@@ -1,0 +1,45 @@
+// features style
+.features-sec{
+	.count-bx{
+		counter-reset: count;
+	}
+}
+
+.feature-count-bx{
+	align-items: flex-start;
+	.icon{
+		width: 60px;
+		height: 60px;
+		font-size: 3rem;
+		line-height: 50px;
+		text-align: center;
+		margin-right: 15px;
+		color: #fff;
+		border: 1px solid $color-hover;
+		background-color: $color-hover;
+		border-radius: 100%;
+		&:before{
+			counter-increment: count;
+			content: counter(count);
+		}
+	}
+	.entry-txt{
+		width: calc(100% - 75px);
+	}
+	.heading{
+		margin-bottom: 1rem;
+	}
+}
+
+
+// responsive media
+@media (max-width: 767px){
+	.feature-count-bx{
+		.icon{
+			width: 40px;
+			height: 40px;
+			font-size: 2rem;
+			line-height: 34px;
+		}
+	}
+}

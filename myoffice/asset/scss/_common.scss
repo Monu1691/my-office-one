@@ -1,0 +1,244 @@
+/* common class */
+// font-family: 'Raleway', sans-serif;
+
+body{
+	font-size: 20px;
+	line-height: 2.2rem;
+	color: $color-site;
+	font-family: 'Raleway', sans-serif;
+}
+h1,h2,h3,h4,h5,h6{
+	margin-bottom: 1.5rem;
+	font-weight: normal;
+}
+h1,.h1{font-size: 3rem;}
+h2,.h2{font-size: 56px;}
+h3,.h3{font-size: 32px;}
+h4,.h4{font-size: 20px;}
+a{
+	@include common-transition(all 0.3s ease-out);
+	outline: none;
+	display: inline-block;
+	text-decoration: none;
+	color: $color-hover;
+	&:hover,&:focus{
+		text-decoration: none;
+	}
+}
+img{max-width: 100%;}
+
+ul{
+	list-style: none;
+	padding: 0;
+	margin: 0 0 1rem;
+}
+p:last-child{
+	margin-bottom: 0;
+}
+
+.text-gray{color: $color-gray;}
+.text-white{color: $color-white;}
+
+.bg-gray{background-color: $color-gray;}
+.bg-black{background-color: $color-site;}
+
+.img{
+	span{
+		display: inline-block;
+	}
+}
+.max-bx{
+	max-width: 1000px;
+}
+
+.common-sec{
+	padding: 5rem 0;
+}
+.common-btn{
+	padding: 0.5rem 1.5rem;
+	border-radius: 0;
+	border: 2px solid $color-hover;
+	background-color: $color-hover;
+	color: $color-white;
+	min-width: 150px;
+	text-transform: uppercase;
+	position: relative;
+	@include common-transition(all 0.3s ease-out);
+	z-index: 1;
+	&:hover,&:focus{
+		@include box-shadow(0 10px 20px 0px rgba(23, 64, 130, 0.4));
+		color: $color-white;
+	}
+}
+.common-btn.round-btn{
+	max-width: 300px;
+	font-size: 18px;
+	text-align: center;
+	text-transform: none;
+	line-height: 24px;
+	border-radius: 50px;
+	overflow: hidden;
+}
+
+.row-5{
+	margin: 0 -5px;
+	[class*="col-"]{
+		padding: 0 5px;
+	}
+}
+
+.form-control{
+	border-radius: 0;
+	&:hover,&:focus{
+		@include box-shadow(none);
+	}
+}
+
+.common-box-shadow{
+	@include box-shadow(0 1px 20px 0px rgba(#252734,0.13));
+}
+.box-shadow-blue{
+	@include box-shadow(0 1px 20px 0px rgba(#174082,0.18));
+}
+.border-transparent{
+	border-color: transparent !important;
+}
+
+.social-links{
+	@extend %d-flex;
+	@extend %flex-wrap;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	li{
+		margin: 1rem;
+		a{
+			height: 50px;
+			width: 50px;
+			line-height: 50px;
+			border: 1px solid $color-hover;
+			color: $color-hover;
+			text-align: center;
+			border-radius: 100%;
+			position: relative;
+			z-index: 1;
+			overflow: hidden;
+		}
+	}
+}
+
+
+
+// accordians section
+.accordian-sec{
+	.card{
+		border-radius: 10px;
+		cursor: pointer;
+		margin-bottom: 2rem;
+		border: 1px solid #d4d5d9;
+	}
+	.a-title{
+		padding: 1.5rem 1.5rem;
+		color: $color-hover;
+		.heading{
+			margin-right: 15px;
+			width: calc(100% - 45px)
+		}
+		.icon{
+			display: inline-block;
+			width: 30px;
+			height: 30px;
+			border: 1px solid $color-site;
+			border-radius: 100%;
+			position: relative;
+			&:before,&:after{
+				content: '';
+				background-color: $color-site;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				@include transform(translate(-50%, -50%));
+			}
+			&:before{
+				height: 2px;
+				width: 15px;
+			}
+			&:after{
+				position: absolute;
+				width: 2px;
+				height: 15px;
+			}
+		}
+	}
+	.card-body{
+		padding: 1.5rem 1.5rem;
+	}
+	.card-header{
+		padding: 0;
+		&:first-child{border-radius: 0;}
+		background:none;
+		border-bottom: none;
+		.icon{
+			@include common-transition(all 0.3s ease-out);
+			.minus{display: none;}
+		}
+		.a-title[aria-expanded=true]{
+			.icon{
+				border-color: $color-hover;
+				&:before,&:after{
+					background-color: $color-hover;
+				}
+				&:after{
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+.custom-form-sec{
+	.input-bx{
+		margin-bottom: 2.5rem;
+		position: relative;
+		input,textarea{
+			border-width: 0;
+			border-bottom-width: 1px;
+		}
+		label{
+			position: absolute;
+			top: -15px;
+			left: 0;
+			margin: 0;
+			color:$color-site;
+			line-height: 16px;
+			padding: 0 5px;
+			pointer-events: none;
+			transition: 0.5s;
+			@include transform(translateY(24px));
+		}
+		input:focus + label,
+		textarea:focus + label{
+			top: -8px;
+			@include transform(translateY(0));
+		}
+	}
+	.input-bx.floating{
+		label{
+			top: -8px;
+			@include transform(translateY(0));
+		}
+	}
+}
+
+.custom-modal{
+	.close{
+		position: absolute;
+		outline: none !important;
+		position: absolute;
+		right: 15px;
+		top:15px;
+	}
+	.modal-body{
+		padding: 50px 30px;
+	}
+}

@@ -1,0 +1,47 @@
+// responsive media
+
+@media (min-width: 576px){
+	.modal-dialog{
+		max-width: 550px;
+	}
+}
+@media (min-width: 1600px){
+	.container{max-width: 1400px}
+}
+
+@media (max-width: 1400px){
+	body{
+		font-size: 16px;
+	}
+	h1,.h1{font-size: 2.5rem;}
+	h2,.h2{font-size: 36px;}
+	h3,.h3{font-size: 26px;}
+	h4,.h4{font-size: 16px;}
+	.pricing-entry-txt .price .amn{
+		font-size: 60px;
+		line-height: 60px;
+	}
+}
+
+@media (max-width: 991px){
+	body{font-size: 18px;}
+	h2, .h2{font-size: 42px;}
+}
+
+@media (max-width: 767px){
+	body{
+		font-size: 16px;
+		line-height: 2rem;
+	}
+	h2, .h2{font-size: 32px;}
+	h3, .h3{font-size: 24px;}
+	h4, .h4{font-size: 18px;}
+}
+
+@media (max-width: 575px){
+	.common-sec{
+		padding: 3rem 0;
+	}
+	h2, .h2{font-size: 28px;}
+	h3, .h3{font-size: 22px;}
+}

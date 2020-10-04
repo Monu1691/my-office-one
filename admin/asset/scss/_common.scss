@@ -1,0 +1,456 @@
+/* common class */
+// font-family: 'Raleway', sans-serif;
+
+body{
+	font-size: 16px;
+	line-height: 30px;
+	color: $color-site;
+	font-family: 'Raleway', sans-serif;
+}
+h1,h2,h3,h4,h5,h6{
+	margin-bottom: 1.5rem;
+	font-weight: normal;
+}
+h1,.h1{font-size: 3rem;}
+h2,.h2{font-size: 56px;}
+h3,.h3{font-size: 32px;}
+h4,.h4{font-size: 20px;}
+h5,.h5{font-size: 18px;}
+h6,.h6{font-size: 16px;}
+a{
+	@include common-transition(all 0.3s ease-out);
+	outline: none;
+	display: inline-block;
+	text-decoration: none;
+	color: $color-site;
+	&:hover,&:focus{
+		text-decoration: none;
+	}
+}
+button{
+	outline: none !important;
+	@include common-transition(all 0.3s ease-out);
+}
+img{max-width: 100%;}
+
+ul{
+	list-style: none;
+	padding: 0;
+	margin: 0 0 1rem;
+}
+p:last-child{
+	margin-bottom: 0;
+}
+
+.text-gray{color: $color-gray;}
+.text-white{color: $color-white;}
+
+.bg-gray{background-color: $color-gray;}
+.bg-black{background-color: $color-site;}
+
+.img{
+	span{
+		display: inline-block;
+	}
+}
+.max-bx{
+	max-width: 1000px;
+}
+
+.common-sec{
+	padding: 5rem 0;
+}
+.common-btn{
+	padding: 0.3rem 1.5rem;
+	border-radius: 0;
+	border: 2px solid $color-hover;
+	background-color: $color-hover;
+	color: $color-white;
+	text-transform: uppercase;
+	position: relative;
+	text-align: center;
+	@include common-transition(all 0.3s ease-out);
+	z-index: 1;
+	&:hover,&:focus{
+		@include box-shadow(0 10px 20px 0px rgba(23, 64, 130, 0.4));
+		color: $color-white;
+	}
+}
+.common-btn.round-btn{
+	max-width: 300px;
+	font-size: 18px;
+	text-align: center;
+	text-transform: none;
+	line-height: 24px;
+	border-radius: 50px;
+	overflow: hidden;
+}
+
+.row-5{
+	margin: 0 -5px;
+	[class*="col-"]{
+		padding: 0 5px;
+	}
+}
+
+.btns-dv{
+	min-width: 120px;
+	text-align: right;
+	.func-btn{
+		background: none;
+		line-height: normal;
+		border: none;
+		outline: none;
+		padding: 0;
+		margin: 10px;
+		width: 30px;
+		text-align: center;
+		opacity: 0.3;
+		@include common-transition(all 0.3s ease-out);
+		&:hover,&:focus{
+			outline: none;
+			opacity: 1;
+		}
+	}
+}
+
+.form-control {
+	height: auto;
+	padding: 14px 5px;
+	border: 1px solid #c1c1c1;
+	border-radius: 0;
+	font-size: 14px;
+	outline: none;
+	&:hover,&:focus{
+		@include box-shadow(none);
+	}
+	&:focus{
+		border-color: $color-hover;
+	}
+}
+
+.custom-form-sec{
+	.input-bx{
+		margin-bottom: 1.5rem;
+		position: relative;
+		input,textarea{
+			border-width: 0;
+			border-bottom-width: 1px;
+		}
+		label{
+			position: absolute;
+			top: -8px;
+			left: 0;
+			margin: 0;
+			color:$color-site;
+			line-height: 16px;
+			padding: 0 5px;
+			pointer-events: none;
+			transition: 0.5s;
+			@include transform(translateY(24px));
+		}
+		input:focus + label,
+		textarea:focus + label{
+			top: -8px;
+			@include transform(translateY(0));
+		}
+	}
+	.input-bx.floating{
+		label{
+			top: -8px;
+			@include transform(translateY(0));
+		}
+	}
+	.common-btn{
+		border-radius: 3px;
+		min-width: 200px;
+	}
+}
+
+
+.icon-form{	
+	.row{
+		position: relative;
+		padding-left: 1.5rem;
+		&:before{
+			content: '';
+			height: 24px;
+			width: 24px;
+			position: absolute;
+			left: 0;
+			top:12px;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: contain;
+		}
+	}
+	.folder-icon:before{background-image: url(../img/folder.png);}
+	.user-icon:before{background-image: url(../img/user.png);}
+	.company-icon:before{background-image: url(../img/company.png);}
+	.email-icon:before{background-image: url(../img/fax.png);}
+	.phone-icon:before{background-image: url(../img/mobile.png);}
+	.password-icon:before{background-image: url(../img/pass.png);}
+	.url-icon:before{background-image: url(../img/web.png);}
+	.note-icon:before{background-image: url(../img/notepad.png);}
+	.ip-icon:before{background-image: url(../img/ip.png);}
+	.copy{
+		position: absolute;
+		right: 5px;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+}
+
+.custom-modal{
+	.modal-header{
+		@extend %d-flex;
+		align-items: center;
+		border-bottom: none;
+		.close{
+			margin: 0;
+			padding: 0;
+		}
+	}
+	.modal-title{font-weight: 300;}
+	.modal-body{
+		padding: 0 4rem 3rem;
+	}
+	.contact-detal-dv{
+		.info-list{
+			margin-left: 1rem;
+			li{
+				margin-bottom: 0.5rem;
+				@extend %d-flex;
+				.icon{
+					margin-right: 1rem;
+					width: 24px;
+					height: 24px;
+				}
+			}
+		}
+	}
+	.modal-footer{
+		@extend %d-flex;
+		justify-content: space-between;
+	}
+}
+
+// checkbox
+.tick-bx {
+	position: relative;
+	.input-tick{
+		width: 24px;
+		margin-right: 5px;
+		position: relative;
+		input[type="checkbox"]{
+			visibility: hidden;
+		}
+		label{
+			border: 1px solid $color-site;
+			border-radius: 3px;
+			cursor: pointer;
+			height: 18px;
+			width: 18px;
+			left: 0;
+			position: absolute;
+			top: 0;
+			margin-bottom: 0;
+			&:after{
+				border: 2px solid $color-hover;
+				border-top: none;
+				border-right: none;
+				content: "";
+				height: 6px;
+				left: 3px;
+				opacity: 0;
+				position: absolute;
+				top: 4px;
+				transform: rotate(-45deg);
+				width: 10px;
+			}
+		}
+		// input[type="checkbox"]:checked + label{
+		// 	background-color: #5ed3cb;
+		// }
+		input[type="checkbox"]:checked + label:after {
+			opacity: 1;
+		}
+	}
+	.txt{
+		width: calc(100% - 35px);
+		line-height: 18px;
+		text-align: left;
+	}
+}
+
+.select-round{
+	position: relative;
+	display: inline-block;
+	margin-bottom: 1.5rem;
+	&:after{
+		content: '\f107';
+		font: normal normal normal 14px/1 FontAwesome;
+		position: absolute;
+		right: 20px;
+		top: 7px;
+		font-size: 20px;
+	}
+	select{
+		background: none;
+		min-width: 100px;
+		border-radius: 3rem;
+		background: none;
+		border: 1px solid $color-site;
+		padding: 0px 25px;
+		font-weight: 300;
+		&:hover,&:focus{
+			outline:none;
+		}
+	}
+}
+
+.select-folder{
+	position: relative;
+	display: inline-block;
+	margin-bottom: 1.5rem;
+	button{
+		background: none;
+		min-width: 100px;
+		border-radius: 3rem;
+		background: none;
+		border: 1px solid $color-site;
+		padding: 0px 25px 0 15px;
+		font-weight: 300;
+		&:hover,&:focus{
+			outline:none;
+		}
+		&:after{
+			content: '\f107';
+			font: normal normal normal 14px/1 FontAwesome;
+			position: absolute;
+			top: 5px;
+			font-size: 20px;
+			border: none;
+		}
+	}
+	.dropdown-menu{
+		min-width: auto;
+		right: 0;
+		margin: 0;
+		padding: 0;
+		li a{padding: 0 15px;}
+	}
+}
+
+.pagination-bx{
+	margin-top: 15px;
+	ul{
+		margin: 0;
+		@extend %d-flex;
+		@extend %flex-wrap;
+		justify-content: center;
+		li{
+			margin: 8px;
+			a{
+				height: 40px;
+				width: 40px;
+				line-height: 35px;
+				font-size: 20px;
+				text-align: center;
+				border: 1px solid #9f9fa0;
+				color:#000;
+				border-radius: 100%;
+			}
+		}
+		li.active{
+			a{
+				background-color: #004a7f;
+				border-color: #004a7f;
+				color: #fff;
+			}
+		}
+	}
+}
+
+.card-bx{
+	@include box-shadow(0px 0px 15px 10px rgba(237,239,245,1));
+	padding: 15px 20px;
+	background-color: #fff;
+	border-radius: 3px;
+	.title{
+		color: #434343;
+		font-weight: bold;
+		@extend %d-flex;
+		.common-btn{
+			font-size: 14px;
+			text-transform: capitalize;
+			font-weight: normal;
+		}
+	}
+	.card-info{
+		margin-bottom: 10px;
+		.label-bx{
+			@extend %d-flex;
+			justify-content: space-between;
+			label{
+				font-size: 16px;
+			}
+			a{
+				font-size: 14px;
+				color: #004a7f;
+				font-style: italic;
+			}
+		}
+		.val-bx{
+			background-color: #f5f5f5;
+			padding: 10px 15px;
+			border: 3px;
+		}
+	}
+}
+.billing-history{
+	td:last-child{
+		text-align: right;
+		width: 25%;
+	}
+	.billing-btn{
+		button{
+			border: none;
+			padding: 3px 15px;
+			font-size: 13px;
+			border-radius: 3px;
+			color: #fff;
+			margin-right: 15px;
+		}
+		.due{background-color: #ffac2a;}
+		.pay-now{background-color: #004a7f;}
+		.paid{background-color: #7f7f7f;}
+	}
+	.billing-pdf{
+		color: #ffac2a;
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+}
+
+
+@media (max-width: 1400px){
+	h1,.h1{font-size: 2.5rem;}
+	h2,.h2{font-size: 42px;}
+	h3,.h3{font-size: 26px;}
+	h4,.h4{font-size: 21px;}
+	h5,.h5{font-size: 16px;}
+	h6,.h6{font-size: 14px;}
+	.pagination-bx{
+		ul{
+			li{
+				a{
+					height: 30px;
+					width: 30px;
+					line-height: 26px;
+					font-size: 16px;
+				}
+			}
+		}
+	}
+}

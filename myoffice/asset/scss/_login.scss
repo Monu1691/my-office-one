@@ -1,0 +1,91 @@
+// login page
+
+.login-page-sec{
+	height: 100vh;
+	@extend %d-flex;
+	@extend %flex-wrap;
+	align-items: center;
+	.logo-dv{
+		margin-bottom: 100px;
+	}
+	.login-form-dv{
+		max-width: 400px;
+		margin: 0 auto;
+		.pass-bx{
+			margin-bottom: 	10px;
+		}
+		.forgot{
+			font-size: 18px;
+		}
+		.common-btn{
+			width: 100%;
+			max-width: none;
+		}
+	}
+	.sign-up-dv{
+		margin-top: 50px;
+	}
+}
+
+
+.signUp-modal{
+	.modal-title{
+		font-weight: 600;
+	}
+	.desc{
+		font-size: 18px;
+	}
+	.input-bx{
+		label{
+			font-size: 18px;
+		}
+	}
+	.common-btn{
+		min-width: 200px;
+	}
+}
+
+.socila-icon-bx{
+	@extend %d-flex;
+	@extend %flex-wrap;
+	justify-content: space-between;
+
+	font-size: 18px;
+	margin: 0 -10px;
+	.s-link{
+		display: block;
+		padding: 0 10px;
+		flex: 1;
+		a{
+			padding: 5px 20px;
+			border-radius: 3px;
+			width: 100%;
+		}
+	}
+	.s-facebook,
+	.s-twitter{
+		a{
+			color: #fff;
+		}
+	}
+	.s-google{
+		a{
+			border: 1px solid #d4d5d9;
+		}
+	}
+	.s-facebook{
+		a{
+			border: 1px solid #3c5a9a;
+			background-color: #3c5a9a;
+		}
+	}
+	.s-twitter{
+		a{
+			border: 1px solid #00acee;
+			background-color: #00acee;
+		}
+	}
+}
+.saprater{
+	margin: 15px 0;
+}

@@ -1,0 +1,81 @@
+// pricing page style
+
+.pricing-entry-txt{
+	border: 2px solid #e1e1e1;
+	padding: 15px;
+	@include common-transition(all 0.3s ease-out);
+	height: 100%;
+	&:hover,&:focus{
+		@include box-shadow(0 1px 20px 0px rgba(#252734,0.13));
+		border-color: transparent;
+		padding: 30px 15px;
+		margin: -15px 0;
+	}
+	.type{
+		color: #ffac2a;
+		font-size: 24px;
+		text-align: center;
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+	.type-sub{
+		text-align: center;
+		font-size: 14px;
+		line-height: 24px;
+		min-height: 50px;
+	}
+	.price{
+		color: $color-hover;
+		text-align: center;
+		margin: 10px 0;
+		line-height: 60px;
+		span{
+			vertical-align: middle;
+		}
+		.curr,.dgts{
+			font-size: 30px;
+		}
+		.amn{
+			font-size: 100px;
+			font-weight: bold;
+		}
+	}
+	.info{
+		margin-top: 50px;
+		ul{
+			li{
+				position: relative;
+				font-size: 15px;
+				padding-left: 20px;
+				&:before{
+					content: '\f00c';
+					font: normal normal normal 14px/1 FontAwesome;
+					color: $color-hover;
+					position: absolute;
+					left: 0;
+					top: 10px;
+				}
+			}
+		}
+	}
+	.link{
+		margin-top: 30px;
+		text-align: center;
+		.common-btn{
+			min-width: 180px;
+			text-transform: uppercase;
+			background-color: #fff;
+			color: $color-site;
+			border-color: $color-site;
+			border-width: 1px;
+			&:hover,&:focus{
+				border-color: $color-site;
+				@include box-shadow(0 5px 12px 0px rgba(0, 0, 0, 0.2));
+			}
+		}
+	}
+}
+
+.pricing-bottom-txt{
+	font-size: 16px;
+}

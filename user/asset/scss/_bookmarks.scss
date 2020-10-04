@@ -1,0 +1,25 @@
+// bookmarks style
+
+.bookmarks-sec{
+	padding-right: 50px;
+	.book-edit-ul{
+		li{
+			@extend %d-flex;
+			.entry-txt{
+				@extend %d-flex;
+				.icon{
+					margin-right: 15px;
+					width: 30px;
+				}
+			}
+		}
+	}	
+}
+
+.bookmarks-edit-top-dv{
+	padding: 0 30px;
+	width: 100%;
+	.btns-dv{
+		padding-right: 50px;	
+	}
+}

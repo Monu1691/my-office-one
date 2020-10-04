@@ -1,0 +1,25 @@
+// notes style
+
+.notes-content-sec{
+	@extend %d-flex;
+	.note-list{
+		background-color: #f8f8fb;
+		padding: 15px;
+		flex: none;
+		width: 200px;
+		ul{
+			li{
+				margin-bottom: 10px;
+			}
+		}
+	}
+	.notes-content{
+		padding: 15px 30px;
+		ul{
+			li{
+				margin-bottom: 10px;
+			}
+		}
+	}
+}
+

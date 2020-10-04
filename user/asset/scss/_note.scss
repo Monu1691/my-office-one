@@ -1,0 +1,66 @@
+// notes page style
+.note-dash-sec{
+	.common-btn{
+		min-width: 180px;
+		background-color: #fff;
+		color: $color-site;
+		border-color: $color-site;;
+		border-width: 1px;
+		text-align: left;
+		&:before{
+			background-color: $color-hover;
+		}
+		&:hover,&:focus{
+			border-color: $color-hover;
+			color: #fff;
+		}
+	}
+}
+
+.note-dash-cont{
+	.note-editor{
+		border: none;
+	}
+	.note-toolbar{
+		border: none;
+	}
+	.note-statusbar{
+		border: none;
+	}
+	.note-editor .note-statusbar .note-resizebar{
+		border: none;
+	}
+}
+
+.note-share-content{
+	.custom-alert{
+		background-color: #f2f3f5;
+		padding: 5px 20px;
+	}
+}
+
+
+.range-bx{
+	.range-dv{
+		text-align: center;
+		#amount{
+			text-align: center;
+			border: none;
+			color: $color-hover;
+		}
+	}
+	#slider-range{
+		margin-top: 15px;
+		border: none;
+		background: $color-hover;
+		height: 5px;
+		a.ui-slider-handle{
+			border-radius: 100%;
+			height: 24px;
+			width: 24px;
+			background: #fff;
+			top:-11px;
+			border: 3px solid $color-hover;
+		}
+	}	
+}
